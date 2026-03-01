@@ -8,7 +8,7 @@ Next Pass is a specialized password dictionary generator that uses both the rule
 ---
 ## 🛡️ Privacy-First AI Architecture
 Most AI tools leak sensitive target data (Names, Birthdays, Hobbies) by sending them directly to an LLM. **Next Pass** solves this by:
-* **Local Data Processing:** Raw target information is processed locally into abstract "behavioral vectors."
+* **Local Data Processing:** Raw target information is processed locally to protect sensitive datas."
 * **Abstract Prompting:** The AI receives structural patterns and linguistic archetypes rather than real-world Identifiable Information (PII).
 
 ---
@@ -31,7 +31,7 @@ Most AI tools leak sensitive target data (Names, Birthdays, Hobbies) by sending 
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/0xblarky/Next-Pass.git](https://github.com/0xblarky/Next-Pass.git)
+git clone https://github.com/0xblarky/NextPass.git
 cd Next-Pass
 ```
 
@@ -45,11 +45,20 @@ pip install -r requirements.txt
 * Inside .env, copy paste ```API_KEY={YOUR_API_KEY}```
  
 ### 4. Running the tool
-**Linux:-
+Put the necessary details in Normal.json if using Normal mode (New key fields cannot be entered)
+Put More than 2 details in AI.json if using AI mode (Can enter any data in key value pair)
+
+Note:- You can add multiple datas in a field (Only some fields can have multiple data in Normal mode while any fields can have multiple data in AI mode)
+
+After setting up the json files, Run the command below
+
+Linux:-
 ```bash
 python3 main.py
 ```
-**Windows:-
+Windows:-
 ```bash
 python main.py
 ```
+
+After generation, Output text file can be found in the Output folder
