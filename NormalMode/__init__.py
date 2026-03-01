@@ -12,9 +12,14 @@ def GenerateRandomPass(generatedPasswords:list,details:dict):
     alias = random.choice(details["Online Aliases"]) if details["Online Aliases"] else fn
     pet = random.choice(details["Pet Names"]) if details["Pet Names"] else "Pet"
 
-    dice = random.randint(3, 6) # Starting from 3 since 1-2 are covered by defaults
+    dice = random.randint(2, 6) # Starting from 3 since 1-2 are covered by defaults
 
-    if dice == 3:
+    if dice == 2:
+        f_name = details["FirtName"]
+        s_name = details["Surname"]
+        schar = random.choice(["!", "@", "#", "$", "_",""," "])
+        generatedPasswords.append(f"{f_name}{schar}{s_name}\n")
+    elif dice == 3:
         # Pattern: Online Alias + Birth Year (e.g., WXYZ2008)
         generatedPasswords.append(f"{alias}{dob[2]}\n")
 
@@ -27,7 +32,8 @@ def GenerateRandomPass(generatedPasswords:list,details:dict):
         # Pattern: Family Combo (e.g., IJKL_MNOP)
         f_name = details["Father's Name"]
         m_name = details["Mother's Name"]
-        generatedPasswords.append(f"{f_name}_{m_name}\n")
+        schar = random.choice(["!", "@", "#", "$", "_",""," "])
+        generatedPasswords.append(f"{f_name}{schar}{m_name}\n")
 
     elif dice == 6:
         # Pattern: Address snippet + Year
@@ -38,7 +44,7 @@ def GenerateRandomPass(generatedPasswords:list,details:dict):
 
 
 def PasswordGen(IsAppend,num_password):
-    f_detail = open("config/TargetDetails.json",'r')
+    f_detail = open("config/Normal.json",'r')
 
 
     if IsAppend:

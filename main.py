@@ -1,12 +1,12 @@
 import NormalMode
 import ColorPrint
-
+import AIAssisted
 
 
 ColorPrint.PrintBanner()
 
 print("The Advance Password Dictionary Generator")
-print("Created by: github.com/Blu-PY\n\n")
+print("Created by: github.com/0xblarky\n\n")
 
 print("A tool used to produce a password list from the details of target.\n\n")
 
@@ -17,7 +17,12 @@ print("""Instructuctions:
       3. AI Assisted mode will generate the passwords with the help of code and available AI options.
       4. The user must have their own API Key to use AI assisted mode.
       5. The details of the target must be entered in the TargetDetails.json file.
-      6. DO NOT DELETE THE OUTPUT FOLDER.\n\n""")
+      6. DO NOT DELETE THE OUTPUT FOLDER.
+      7. Configuration Setup:- There will be 2 config files Normal Config and AI Config. In Normal config do not delete the keys or else you will break the program. 
+         In AI one, Add any detail with proper key value.
+      8. Make sure to create an .env file and add your API KEY in the API_KEY field or else you won't be able to use AI mode.
+      \n\n""")
+
 
 
 
@@ -44,7 +49,7 @@ while not quit:
             quit = True
         elif mode_choice == '1':
             ColorPrint.LogSuccess("Normal Mode Selected")
-            pass_number = int(input("How many password would you like to generate? (Limit:- if less than 4, Defaults to 4)\n-> "))
+            pass_number = int(input("How many passwords would you like to generate? (Limit:- if less than 4, Defaults to 4)\n-> "))
             NormalMode.Generate(int(pass_number))
             choice = input("Want to generate more passwords? (y/n) ")
             if choice == "y":
@@ -54,5 +59,7 @@ while not quit:
                 continue
         elif mode_choice == '2':
             ColorPrint.LogSuccess("AI assisted Mode Selected")
+            AIAssisted.GeneratePassword(False)
     except ValueError:
-        ColorPrint.LogWarning("Enter Valid Option!")
+        ColorPrint.LogError("Invalid Input")
+        
