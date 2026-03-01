@@ -45,7 +45,7 @@ pip install -r requirements.txt
 * Inside .env, copy paste ```API_KEY={YOUR_API_KEY}```
  
 ### 4. Running the tool
-Put the necessary details in Normal.json if using Normal mode (New key fields cannot be entered)
+Inside the config folder, Put the necessary details in Normal.json if using Normal mode (New key fields cannot be entered)
 Put More than 2 details in AI.json if using AI mode (Can enter any data in key value pair)
 
 Note:- You can add multiple datas in a field (Only some fields can have multiple data in Normal mode while any fields can have multiple data in AI mode)
