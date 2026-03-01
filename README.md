@@ -1,4 +1,4 @@
-# 🚀 Next Pass
+# 🚀 NextPass
 **The Privacy-Centric AI Password Dictionary Generator.**
 
 Next Pass is a specialized password dictionary generator that uses both the rule-based logic and Large Language Models to generate passwords. Designed for security researchers, it offers offline generation to generate a password dictionary on the go and also leverages AI to predict human-like password patterns while maintaining a strict privacy air-gap for target data.
