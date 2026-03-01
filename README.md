@@ -15,7 +15,6 @@ Most AI tools leak sensitive target data (Names, Birthdays, Hobbies) by sending 
 
 ## ✨ Features
 * **Offline Generation:** Generates most probable human like password used by target ( generated using pre-defined rules )
-* **Pure Python Core:** Built entirely with native Python logic (no `itertools` or external modules for the core engine), demonstrating high-efficiency manual iteration.
 * **AI Mode:** Leverage the power of AI to go beyond the pre-defined rules and generate more varieties of passowrds
 * **Clean Exports:** Outputs dictionaries in `.txt` format, optimized for tools like Hashcat and John the Ripper.
 
