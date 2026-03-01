@@ -9,7 +9,7 @@ __pycache__/
 
 # Project specific outputs
 Output/output.txt
-
+Output/AIoutput.txt
 # OS generated files
 .DS_Store
 thumbs.db
